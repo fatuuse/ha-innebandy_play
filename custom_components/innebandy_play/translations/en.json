@@ -1,0 +1,63 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add team",
+        "description": "Search for a team name, for example 'Ingarö P2015'.",
+        "data": { "query": "Team name" }
+      },
+      "team": {
+        "title": "Choose team",
+        "description": "Choose the team you want to follow.",
+        "data": { "company": "Team" }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach Innebandy Play. Try again later.",
+      "no_teams_found": "No teams found.",
+      "query_too_short": "Enter at least two characters."
+    },
+    "abort": {
+      "already_configured": "This team is already added."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Team settings",
+        "description": "Standings ID (eventReference) for the league table. Leave empty to use the league ID from the match metadata.",
+        "data": { "standings_group_id": "Standings ID" }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach Innebandy Play. Try again later.",
+      "group_not_found": "Standings ID not found, or the team is not in the table."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_game": { "name": "Next match" },
+      "current_game": { "name": "Current match" },
+      "last_event": { "name": "Last event" },
+      "standings": { "name": "Table position" },
+      "results": { "name": "Results" },
+      "scorers": { "name": "Top scorers" },
+      "squad": { "name": "Squad" }
+    },
+    "binary_sensor": {
+      "live": { "name": "Match in progress" }
+    }
+  },
+  "services": {
+    "refresh": {
+      "name": "Refresh matches",
+      "description": "Fetches the match list again immediately.",
+      "fields": {
+        "company": {
+          "name": "Team",
+          "description": "Team slug. Leave empty to refresh all teams."
+        }
+      }
+    }
+  }
+}

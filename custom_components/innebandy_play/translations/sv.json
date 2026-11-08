@@ -1,1 +1,63 @@
-
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Lägg till lag",
+        "description": "Sök på lagnamn, till exempel 'Ingarö P2015'.",
+        "data": { "query": "Lagnamn" }
+      },
+      "team": {
+        "title": "Välj lag",
+        "description": "Välj vilket lag du vill följa.",
+        "data": { "company": "Lag" }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kunde inte nå Innebandy Play. Försök igen senare.",
+      "no_teams_found": "Inga lag hittades.",
+      "query_too_short": "Skriv minst två tecken."
+    },
+    "abort": {
+      "already_configured": "Laget är redan tillagt."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Inställningar för laget",
+        "description": "Tabell-ID (eventReference) för seriens tabell. Lämna tomt för att använda serie-id från matchens metadata.",
+        "data": { "standings_group_id": "Tabell-ID" }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kunde inte nå Innebandy Play. Försök igen senare.",
+      "group_not_found": "Tabell-ID hittades inte, eller laget finns inte i tabellen."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_game": { "name": "Nästa match" },
+      "current_game": { "name": "Pågående match" },
+      "last_event": { "name": "Senaste händelse" },
+      "standings": { "name": "Tabellplats" },
+      "results": { "name": "Resultat" },
+      "scorers": { "name": "Målskyttar" },
+      "squad": { "name": "Trupp" }
+    },
+    "binary_sensor": {
+      "live": { "name": "Match pågår" }
+    }
+  },
+  "services": {
+    "refresh": {
+      "name": "Uppdatera matcher",
+      "description": "Hämtar matchlistan på nytt direkt.",
+      "fields": {
+        "company": {
+          "name": "Lag",
+          "description": "Lagets slug, till exempel ingaro-if-p2013-a. Lämna tomt för att uppdatera alla lag."
+        }
+      }
+    }
+  }
+}
