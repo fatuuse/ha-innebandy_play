@@ -46,6 +46,9 @@
     },
     "binary_sensor": {
       "live": { "name": "Match pågår" }
+    },
+    "button": {
+      "refresh": { "name": "Uppdatera matcher" }
     }
   },
   "services": {
