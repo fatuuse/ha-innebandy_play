@@ -46,6 +46,9 @@
     },
     "binary_sensor": {
       "live": { "name": "Match in progress" }
+    },
+    "button": {
+      "refresh": { "name": "Refresh matches" }
     }
   },
   "services": {

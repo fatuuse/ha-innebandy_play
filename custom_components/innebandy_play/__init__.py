@@ -10,7 +10,7 @@ from .api import InnebandyPlayApi
 from .const import CONF_COMPANY, CONF_GROUP_ID, CONF_TEAM_NAME, DOMAIN
 from .coordinator import InnebandyPlayCoordinator
 
-PLATFORMS = [Platform.SENSOR, Platform.BINARY_SENSOR]
+PLATFORMS = [Platform.SENSOR, Platform.BINARY_SENSOR, Platform.BUTTON]
 SERVICE_REFRESH = "refresh"
 
 
